@@ -1,0 +1,157 @@
+$width: clamp(500px, 95vw, 1500px);
+body.home {
+  background-image: url("/images/scene.jpg");
+  background-size: cover;
+  &::before {
+    content: "";
+    background: linear-gradient(transparent, $black);
+    inset: 0;
+    position: fixed;
+  }
+}
+header {
+  background: $black;
+  img {
+    mask-image: none !important;
+  }
+}
+.content {
+  isolation: isolate;
+  margin: $header-height auto 0;
+  height: calc(100vh - #{$header-height});
+  padding: $big-padding;
+  display: flex;
+  flex-direction: column;
+  // border: solid 3px slateblue;
+  .hero {
+    text-align: center;
+    width: $width;
+    margin: 0 auto;
+    h1 {
+      font-size: 72px;
+      line-height: 1;
+    }
+    p {
+      display: inline-block;
+      // text-align: justify;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  .habitat-links {
+    width: $width;
+    margin: 0 auto;
+  }
+  .img-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: $padding;
+    // border: solid 3px coral;
+    width: $width;
+    .species-wrapper {
+      margin: 0;
+      a {
+        position: relative;
+        flex: 1;
+        h3 {
+          font-size: 3rem;
+          color: white;
+          opacity: 0.7;
+          letter-spacing: 4px;
+          margin: 0;
+          background: linear-gradient(transparent, $black);
+          position: absolute;
+          z-index: 2;
+          inset: auto 10px 7px 5px;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          border-radius: $border-radius;
+          object-fit: cover;
+          border: solid 5px $white;
+          filter: grayscale(1);
+          transition: 300ms;
+          &:hover {
+            cursor: pointer;
+            border-color: $primary;
+            filter: grayscale(0);
+            transition: 300ms;
+          }
+        }
+      }
+    }
+  }
+}
+.about-wrapper {
+  isolation: isolate;
+  margin: $header-height 0 0 0;
+  height: calc(100vh - #{$header-height});
+  nav {
+    position: fixed;
+    top: $header-height;
+    background-color: $black;
+    height: 100%;
+    padding: 10px;
+    display: inline-block;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          img {
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            width: 80px;
+            border: solid 1px #fff8;
+          }
+        }
+      }
+    }
+  }
+  .about-species {
+    display: none;
+    > div {
+      h3 {
+        font-size: $hero;
+        margin: 0;
+      }
+      padding: $padding;
+      justify-content: space-between;
+      align-items: center;
+      max-width: $width;
+      display: flex;
+    }
+    p {
+      margin: $big-padding;
+      padding: $padding;
+      max-width: 76ch;
+      background-color: #333a;
+    }
+    &:target {
+      display: block;
+      height: 100%;
+      margin: 0 0 0 100px;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: right;
+      &[id="lion"] {
+        background-image: url("/images/lion.jpg");
+      }
+      &[id="tiger"] {
+        background-image: url("/images/tiger.jpg");
+      }
+      &[id="bison"] {
+        background-image: url("/images/bison.jpg");
+      }
+      &[id="jaguar"] {
+        background-image: url("/images/jaguar.jpg");
+      }
+    }
+  }
+}
