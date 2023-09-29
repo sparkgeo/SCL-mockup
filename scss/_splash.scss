@@ -1,6 +1,6 @@
 $width: clamp(500px, 95vw, 1500px);
 body.home {
-  background-image: url("/images/scene.jpg");
+  background-image: url("https://sparkgeo.github.io/SCL-mockup/public/images/scene.jpg");
   background-size: cover;
   &::before {
     content: "";
@@ -115,11 +115,11 @@ header {
   }
   .about-species {
     display: none;
+    h2,
+    h3 {
+      margin-left: $big-padding;
+    }
     > div {
-      h3 {
-        font-size: $hero;
-        margin: 0;
-      }
       padding: $padding;
       justify-content: space-between;
       align-items: center;

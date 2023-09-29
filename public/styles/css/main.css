@@ -620,8 +620,6 @@ header:not(#mapHeader) li a:not(.button).current-page {
 header:not(#mapHeader) img {
   max-height: 50px;
   width: 44px;
-  -webkit-mask-image: url("../images/header-texture.png");
-  mask-image: url("../images/header-texture.png");
 }
 
 main:not(.map-page) {
@@ -1366,7 +1364,7 @@ main #mapFooter button.country-note {
   }
 }
 body.home {
-  background-image: url("/images/scene.jpg");
+  background-image: url("https://sparkgeo.github.io/SCL-mockup/public/images/scene.jpg");
   background-size: cover;
 }
 body.home::before {
@@ -1478,16 +1476,16 @@ header img {
 .about-wrapper .about-species {
   display: none;
 }
+.about-wrapper .about-species h2,
+.about-wrapper .about-species h3 {
+  margin-left: 3rem;
+}
 .about-wrapper .about-species > div {
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
   max-width: clamp(500px, 95vw, 1500px);
   display: flex;
-}
-.about-wrapper .about-species > div h3 {
-  font-size: 4rem;
-  margin: 0;
 }
 .about-wrapper .about-species p {
   margin: 3rem;

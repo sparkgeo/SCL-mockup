@@ -78,8 +78,8 @@ header:not(#mapHeader) {
   img {
     max-height: 50px;
     width: 44px;
-    -webkit-mask-image: url("../images/header-texture.png");
-    mask-image: url("../images/header-texture.png");
+    // -webkit-mask-image: url("../images/header-texture.png");
+    // mask-image: url("../images/header-texture.png");
   }
 }
 main:not(.map-page) {
